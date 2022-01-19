@@ -3,7 +3,16 @@ import React, { Component } from "react";
 export default class Navigation extends Component {
 	constructor() {
 		super();
+
+		this.state = {
+			id: "",
+			item_title: "",
+			item_img: "",
+			category: "",
+		};
 	}
+
+	handleImageLoad() {}
 
 	render() {
 		return (
