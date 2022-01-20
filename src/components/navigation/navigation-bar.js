@@ -1,34 +1,86 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
+import {
+	Navbar,
+	NavbarBrand,
+	Collapse,
+	Nav,
+	NavItem,
+	NavbarText,
+} from "reactstrap";
 
 import logo from "../../../static/assets/logo/JukeboxWoodCraft.jpg";
 
 export default class Navigation extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			id: "",
-			item_title: "",
-			item_img: "",
-			category: "",
-		};
+	constructor() {
+		super();
 	}
-
-	handleImageLoad() {}
 
 	render() {
 		return (
 			<div className="navigation-wrapper">
-				<div className="logo-img">
-					<img src={logo} />
-				</div>
-				<div className="navBtnDiv">
-					<button>Home</button>
-					<button>Products</button>
-					<button>About</button>
-					<button>Contact</button>
-				</div>
-				<div className="site-name">Jukebox Wood Crafts</div>
+				<Navbar color="secondary" dark expand="md">
+					<div className="img-wrapper">
+						<NavbarText>
+							<img src={logo} />
+						</NavbarText>
+					</div>
+					<div className="navbar-noimg">
+						<NavbarBrand href="/">
+							<h1>Jukebox Wood Crafts</h1>
+						</NavbarBrand>
+						<Collapse navbar className="right-side">
+							<Nav className="me-auto" navbar>
+								<NavItem>
+									<NavLink
+										to="/about/"
+										className="navbarLinks"
+									>
+										About
+									</NavLink>
+								</NavItem>
+								<NavItem>
+									<NavLink
+										to="/contact"
+										className="navbarLinks"
+									>
+										Contact
+									</NavLink>
+								</NavItem>
+								<NavItem>
+									<NavLink
+										to="/products"
+										className="navbarLinks"
+									>
+										Products
+									</NavLink>
+								</NavItem>
+							</Nav>
+						</Collapse>
+					</div>
+				</Navbar>
+				{/* <div className="flexdiv">
+					<div className="logo-img">
+						<img src={logo} />
+					</div>
+					<div className="site-name">Jukebox Wood Crafts</div>
+					<div className="navBtnDiv">
+						<select name="Nav-Links">
+							<option as={Link} to="/">
+								Home
+							</option>
+							<option as={Link} to="/products">
+								Products
+							</option>
+							<option as={Link} to="/about">
+								About
+							</option>
+							<option as={Link} to="/contact">
+								Contact
+							</option>
+						</select>
+					</div>
+				</div> */}
 			</div>
 		);
 	}

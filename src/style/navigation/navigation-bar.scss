@@ -1,0 +1,38 @@
+.navigation-wrapper {
+	display: grid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// width: 100vw;
+	grid-gap: 100px;
+	margin: 0px;
+	grid-template-columns: 1fr;
+	.img-wrapper {
+		img {
+			height: 100px;
+		}
+	}
+
+	.navbar-noimg {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		h1 {
+			font-family: "Times New Roman", Times, serif;
+			font-size: 4em;
+			padding: 2px;
+		}
+		.navbarLinks {
+			color: $beige;
+			background-color: $charcoal;
+			margin: 0px 5px;
+			padding: 3px 6px;
+		}
+		.right-side {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			font-size: 2em;
+		}
+	}
+}
