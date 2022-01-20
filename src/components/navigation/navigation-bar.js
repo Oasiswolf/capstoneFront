@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 
+import logo from "../../../static/assets/logo/JukeboxWoodCraft.jpg";
+
 export default class Navigation extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			id: "",
@@ -18,7 +20,7 @@ export default class Navigation extends Component {
 		return (
 			<div className="navigation-wrapper">
 				<div className="logo-img">
-					<img src="" />
+					<img src={logo} />
 				</div>
 				<div className="navBtnDiv">
 					<button>Home</button>
