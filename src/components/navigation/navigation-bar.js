@@ -1,13 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import {
-	Navbar,
-	NavbarBrand,
-	Collapse,
-	Nav,
-	NavItem,
-	NavbarText,
-} from "reactstrap";
+import { Navbar, NavbarBrand, Nav, NavItem, NavbarText } from "reactstrap";
 
 import logo from "../../../static/assets/logo/JukeboxWoodCraft.jpg";
 
@@ -29,34 +22,25 @@ export default class Navigation extends Component {
 						<NavbarBrand href="/">
 							<h1>Jukebox Wood Crafts</h1>
 						</NavbarBrand>
-						<Collapse navbar className="right-side">
-							<Nav className="me-auto" navbar>
-								<NavItem>
-									<NavLink
-										to="/about/"
-										className="navbarLinks"
-									>
-										About
-									</NavLink>
-								</NavItem>
-								<NavItem>
-									<NavLink
-										to="/contact"
-										className="navbarLinks"
-									>
-										Contact
-									</NavLink>
-								</NavItem>
-								<NavItem>
-									<NavLink
-										to="/products"
-										className="navbarLinks"
-									>
-										Products
-									</NavLink>
-								</NavItem>
-							</Nav>
-						</Collapse>
+					</div>
+					<div className="links">
+						<Nav navbar>
+							<NavItem>
+								<NavLink to="/about/" className="navbarLinks">
+									About
+								</NavLink>
+							</NavItem>
+							<NavItem>
+								<NavLink to="/contact" className="navbarLinks">
+									Contact
+								</NavLink>
+							</NavItem>
+							<NavItem>
+								<NavLink to="/products" className="navbarLinks">
+									Products
+								</NavLink>
+							</NavItem>
+						</Nav>
 					</div>
 				</Navbar>
 				{/* <div className="flexdiv">

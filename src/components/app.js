@@ -7,6 +7,7 @@ import About from "./common-pages/about";
 import Contact from "./common-pages/contact";
 import Products from "./product-area/product";
 import Navigation from "./navigation/navigation-bar.js";
+import ContactForm from "./form/form";
 
 export default class App extends Component {
 	constructor() {
@@ -16,14 +17,15 @@ export default class App extends Component {
 			data: [],
 		};
 	}
-	componentDidMount() {
-		this.getProductItems();
+
+	renderProduct(productItems) {
+		const itemImg = productItems.item_img
+		const category = productItems.category
+		const itemName = productItems.item_title
 	}
 
-	homeItems() {
-		return this.state.data.map((item) => {
-			return <Home key={item.id} item={item} />;
-		});
+	componentDidMount() {
+		this.getProductItems();
 	}
 
 	productItems() {
@@ -58,6 +60,10 @@ export default class App extends Component {
 							<Route path="/about" component={About} />
 							<Route path="/contact" component={Contact} />
 							<Route path="/products" component={Products} />
+							<Route
+								path="/contactform"
+								component={ContactForm}
+							/>
 						</Switch>
 					</div>
 				</Router>
