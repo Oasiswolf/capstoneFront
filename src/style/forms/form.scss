@@ -1,0 +1,33 @@
+.product-request-form {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100vw;
+
+	.city-state-zip {
+		display: grid;
+		grid-template-columns: 200px 150px 125px;
+		width: 50%;
+		padding: 0px 30px;
+		gap: 10px;
+	}
+
+	.btn-wrapper {
+		display: flex;
+		justify-content: start;
+		margin-left: 250px;
+
+		.submitbtn {
+			height: 45px;
+			width: 15%;
+			font-size: 3em;
+			color: $charcoal;
+			background-color: $choco;
+
+			&:hover {
+				background-color: $olive;
+				color: $tan;
+			}
+		}
+	}
+}

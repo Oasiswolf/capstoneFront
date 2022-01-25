@@ -17,7 +17,14 @@ export default function Contact() {
 				<h2>Contact Page</h2>
 				<div className="location-wrapper">
 					<div className="location-icon"></div>
-					<div className="location-text">China,Texas</div>
+					<div className="location-text">
+						<a
+							href="https://goo.gl/maps/hz9EjzZaiiYw3vc16"
+							target="_blank"
+						>
+							China Springs,Texas
+						</a>
+					</div>
 				</div>
 				<div className="fbgroup-info">
 					<div className="fbgroup-icon"></div>
