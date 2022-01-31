@@ -68,5 +68,25 @@
 				}
 			}
 		}
+		.etsygroup-info {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 7px;
+
+			.etsygroup-icon {
+				font-size: 2em;
+			}
+			.etsygroup-link {
+				a {
+					font-size: 2em;
+					text-decoration: none;
+					color: beige;
+					&:hover {
+						color: navy;
+					}
+				}
+			}
+		}
 	}
 }

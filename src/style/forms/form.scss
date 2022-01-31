@@ -1,15 +1,21 @@
-.product-request-form {
+.form-wrapper {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	flex-direction: column;
-	width: 100vw;
+	width: 50vw;
 
-	.city-state-zip {
+	.name-email-wrapper {
 		display: grid;
-		grid-template-columns: 200px 150px 125px;
+		grid-template-columns: 1fr 1fr;
 		width: 50%;
 		padding: 0px 30px;
 		gap: 10px;
+	}
+	.comment-question-wrapper {
+		display: flexbox;
+		height: 50vh;
+		width: 50vw;
 	}
 
 	.btn-wrapper {

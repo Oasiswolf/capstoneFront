@@ -47,6 +47,7 @@ export default class ContactForm extends Component {
 			<form
 				action="https://submit-form.com/P1aNvCUN"
 				onSubmit={this.handleSubmit}
+				className="form-wrapper"
 			>
 				<div className="name-email-wrapper">
 					<label>Name</label>

@@ -1,0 +1,31 @@
+.product-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.item-name {
+		display: flex;
+		font-size: 1.25rem;
+
+		.item-id {
+			display: none;
+		}
+	}
+
+	.item-img-wrapper {
+		margin: 15px;
+		img {
+			height: 200px;
+			width: 200px;
+			border: 1px solid $tan;
+			border-radius: 5px;
+			padding: 3px;
+		}
+	}
+
+	.item-category {
+		font-size: 1rem;
+		display: none;
+	}
+}

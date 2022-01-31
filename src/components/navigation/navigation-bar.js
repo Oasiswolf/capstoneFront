@@ -26,6 +26,11 @@ export default class Navigation extends Component {
 					<div className="links">
 						<Nav navbar>
 							<NavItem>
+								<NavLink exact to="/" className="navbarLinks">
+									Home
+								</NavLink>
+							</NavItem>
+							<NavItem>
 								<NavLink to="/about/" className="navbarLinks">
 									About
 								</NavLink>
@@ -33,11 +38,6 @@ export default class Navigation extends Component {
 							<NavItem>
 								<NavLink to="/contact" className="navbarLinks">
 									Contact
-								</NavLink>
-							</NavItem>
-							<NavItem>
-								<NavLink to="/products" className="navbarLinks">
-									Products
 								</NavLink>
 							</NavItem>
 						</Nav>

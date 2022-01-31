@@ -1,0 +1,53 @@
+.add-item-wrapper {
+	height: 80vh;
+	width: 80vw;
+	padding: 10vh 10vw;
+
+	.page-title-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		height: 20vh;
+	}
+
+	.page-setup-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 3fr 1fr;
+		height: 58vh;
+
+		.left-column {
+			display: flex;
+			width: 25vw;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.center-column {
+			display: flex;
+			width: 50vw;
+			justify-content: center;
+			align-items: center;
+
+			.item-title {
+			}
+
+			.item-description {
+			}
+
+			.item-img {
+			}
+		}
+
+		.right-column {
+			display: flex;
+			width: 25vw;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.footer-wrapper {
+		height: 20vh;
+	}
+}

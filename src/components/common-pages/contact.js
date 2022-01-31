@@ -33,7 +33,18 @@ export default function Contact() {
 							href="https://www.facebook.com/JukeboxsWoodCrafts"
 							target="_blank"
 						>
-							Jukebox Wood Crafts
+							Jukebox Wood Crafts Facebook Page
+						</a>
+					</div>
+				</div>
+				<div className="etsygroup-info">
+					<div className="etsygroup-icon"></div>
+					<div className="etsygroup-link">
+						<a
+							href="https://www.etsy.com/shop/JukeBoxWoodCrafts?ref=shop_sugg"
+							target="_blank"
+						>
+							Jukebox Wood Crafts on Etsy
 						</a>
 					</div>
 				</div>
