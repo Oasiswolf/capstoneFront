@@ -1,53 +1,112 @@
 .add-item-wrapper {
-	height: 80vh;
-	width: 80vw;
-	padding: 10vh 10vw;
+	height: calc(100vh - 30vh);
+	width: 100vw;
+	padding: 5vh 5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	background-image: url("https://www.pcc.edu/community/wp-content/uploads/sites/36/2019/04/GettyImages-510385414.jpg");
+	background-size: cover;
+	background-attachment: scroll;
+	background-repeat: space;
 
 	.page-title-wrapper {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
 		height: 20vh;
+		font-size: 1.5rem;
+		flex-direction: column;
 	}
 
 	.page-setup-wrapper {
 		display: grid;
 		grid-template-columns: 1fr 3fr 1fr;
 		height: 58vh;
+		width: 100vw;
 
 		.left-column {
 			display: flex;
-			width: 25vw;
+			width: 10vw;
 			justify-content: center;
 			align-items: center;
 		}
 
 		.center-column {
 			display: flex;
-			width: 50vw;
+			width: 75vw;
 			justify-content: center;
 			align-items: center;
+			margin: 2px;
 
-			.item-title {
+			.add-item-form {
+				width: 100vw;
+				background-color: navy;
+				opacity: 0.85;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				gap: 15px;
+				padding: 10px;
 			}
 
-			.item-description {
+			.title {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 3px;
+				color: beige;
+
+				input {
+					height: 3vh;
+					width: 30vw;
+				}
 			}
 
-			.item-img {
+			.category {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 3px;
+
+				color: beige;
+
+				input {
+					height: 3vh;
+					width: 30vw;
+				}
+			}
+
+			.image {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 3px;
+
+				input {
+					height: 3vh;
+					width: 30vw;
+				}
+			}
+
+			.btn {
+				background-color: beige;
+				color: navy;
+				height: 6vh;
+				width: 12vw;
+				font-size: 3vw;
+				font-weight: 700;
 			}
 		}
 
 		.right-column {
 			display: flex;
-			width: 25vw;
+			width: 10vw;
 			justify-content: center;
 			align-items: center;
 		}
-	}
-
-	.footer-wrapper {
-		height: 20vh;
 	}
 }

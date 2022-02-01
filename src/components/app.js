@@ -7,7 +7,7 @@ import Contact from "./common-pages/contact";
 import Products from "./product-area/product";
 import Navigation from "./navigation/navigation-bar.js";
 import ContactForm from "./form/form";
-import Admin from "./form/admin";
+import Addmin from "./form/addmin";
 
 export default class App extends Component {
 	constructor() {
@@ -27,7 +27,7 @@ export default class App extends Component {
 							<Route path="/contact" component={Contact} />
 							<Route path="/products" component={Products} />
 							<Route path="/form" component={ContactForm} />
-							<Route path="/add" component={Admin} />
+							<Route path="/add" component={Addmin} />
 						</Switch>
 					</div>
 				</Router>

@@ -20,7 +20,7 @@ export default class Navigation extends Component {
 					</div>
 					<div className="navbar-noimg">
 						<NavbarBrand href="/">
-							<h1>Jukebox Wood Crafts</h1>
+							<p>Jukebox Wood Crafts</p>
 						</NavbarBrand>
 					</div>
 					<div className="links">

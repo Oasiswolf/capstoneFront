@@ -1,11 +1,14 @@
 .navigation-wrapper {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
 	justify-content: space-evenly;
 	width: 100vw;
 	margin: 0px;
+	height: 30vh;
 
-	nav {
+	.navbar {
 		width: 100vw;
+		// height: 20vh;
 	}
 	.container-fluid {
 		display: flex;
@@ -16,30 +19,42 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			flex-wrap: inherit;
+			width: 50vw;
 			img {
-				height: 100px;
-				border-radius: 10px;
+				border-radius: 35px;
+				width: 10vw;
 			}
 		}
 
 		.navbar-noimg {
 			display: flex;
-			justify-content: space-between;
+			justify-content: center;
 			align-items: center;
-			h1 {
-				font-family: "Times New Roman", Times, serif;
-				font-size: 4.5rem;
+			width: 75vw;
+			word-wrap: normal;
+			p {
+				font-family: Georgia, "Times New Roman", Times, serif;
+				font-size: 5vw;
 				padding: 2px;
 			}
 		}
 
 		.links {
+			width: 50vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			Nav {
+				flex-wrap: inherit;
+			}
 			.navbarLinks {
 				color: $beige;
 				background-color: $charcoal;
 				margin: 0px 5px;
 				padding: 3px 6px;
-				font-size: 2em;
+				font-size: 1.75rem;
 			}
 		}
 	}
