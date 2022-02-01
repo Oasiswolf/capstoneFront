@@ -1,7 +1,7 @@
 .contact-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	height: calc(100vh - 110px);
+	height: calc(100vh - 30vh);
 	border-radius: 5px;
 	background-color: slategray;
 	color: navy;
@@ -12,6 +12,7 @@
 		justify-content: center;
 		align-items: center;
 		border-radius: 5px;
+		width: 50vw;
 	}
 
 	.rightside-wrapper {
@@ -20,10 +21,11 @@
 		justify-content: center;
 		border-radius: 5px;
 		align-items: center;
+		width: 50vw;
 		gap: 20px;
 
 		h2 {
-			font-size: 4em;
+			font-size: 4vw;
 			font-weight: 600;
 		}
 
@@ -38,7 +40,7 @@
 			}
 			.location-text {
 				a {
-					font-size: 2.25em;
+					font-size: 3vw;
 					text-decoration: none;
 					color: beige;
 					&:hover {
@@ -59,7 +61,7 @@
 			}
 			.fbgroup-link {
 				a {
-					font-size: 2em;
+					font-size: 2.75vw;
 					text-decoration: none;
 					color: beige;
 					&:hover {
@@ -79,7 +81,7 @@
 			}
 			.etsygroup-link {
 				a {
-					font-size: 2em;
+					font-size: 3vw;
 					text-decoration: none;
 					color: beige;
 					&:hover {
