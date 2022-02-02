@@ -1,11 +1,11 @@
 .about-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	height: 100vh;
+	// height: 100vh;
 	border-radius: 5px;
 	background-color: slategray;
 	color: navy;
-	width: 100vw;
+	// width: 100vw;
 	padding: 5px;
 
 	.leftside-wrapper {
@@ -54,10 +54,24 @@
 @media (min-width: 0px) and (max-width: 576px) {
 	.about-wrapper {
 		grid-template-columns: 1fr;
-		// height: (100vh);
 
 		.leftside-wrapper {
-			// background-size: 100vh;
+			height: 250px;
+		}
+
+		.rightside-wrapper {
+			.title-wrapper {
+				h2 {
+					font-size: 2rem;
+					font-weight: 700;
+				}
+			}
+
+			.info-wrapper {
+				.about-us-text {
+					font-size: 1.75rem;
+				}
+			}
 		}
 	}
 }
