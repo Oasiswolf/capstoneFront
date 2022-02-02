@@ -11,7 +11,31 @@ export default class Home extends Component {
 		};
 		this.productItems = this.productItems.bind(this);
 		this.handleFilter = this.handleFilter.bind(this);
-		// this.generateSearchMenu = this.generateSearchMenu.bind(this);
+		this.itemName = this.itemName.bind(this);
+		this.generateSearchMenu = this.generateSearchMenu.bind(this);
+	}
+
+	itemName() {
+		return this.setState({
+			name:
+				"flag" ||
+				"emblem" ||
+				"tray" ||
+				"misc" ||
+				"wreath" ||
+				"wagon" ||
+				"cross" ||
+				"family" ||
+				"stall" ||
+				"igy6" ||
+				"heart" ||
+				"desk" ||
+				"mother" ||
+				"puzzle" ||
+				"christmas" ||
+				"valentine" ||
+				"light",
+		});
 	}
 
 	componentDidMount() {
@@ -31,7 +55,7 @@ export default class Home extends Component {
 				if (filter) {
 					this.setState({
 						data: data.filter((item) => {
-							return item.category === this.state.name;
+							return item.category === filter;
 						}),
 					});
 
@@ -57,66 +81,63 @@ export default class Home extends Component {
 		}
 	}
 
-	// generateSearchMenu() {
-	// 	const searchButtons = [
-	// 		"flag",
-	// 		"emblem",
-	// 		"tray",
-	// 		"misc",
-	// 		"wreath",
-	// 		"wagon",
-	// 		"cross",
-	// 		"family",
-	// 		"stall",
-	// 		"igy6",
-	// 		"heart",
-	// 		"desk",
-	// 		"mother",
-	// 		"puzzle",
-	// 		"christmas",
-	// 		"valentine",
-	// 		"light",
-	// 	];
+	generateSearchMenu() {
+		const searchButtons = [
+			"flag",
+			"emblem",
+			"tray",
+			"misc",
+			"wreath",
+			"wagon",
+			"cross",
+			"family",
+			"stall",
+			"igy6",
+			"heart",
+			"desk",
+			"mother",
+			"puzzle",
+			"christmas",
+			"valentine",
+			"light",
+		];
 
-	// 	return searchButtons.map((button) => {
-	// 		return (
-	// 			<button
-	// 				className="btn"
-	// 				onClick={() => {
-	// 					this.handleFilter(`${button}`);
-	// 				}}
-	// 			>{`${button}`}</button>
-	// 		);
-	// 	});
-	// }
+		return searchButtons.map((button) => {
+			return (
+				<option
+					className="btn"
+					onClick={() => {
+						this.handleFilter(`${button}`);
+					}}
+				>{`${button}`}</option>
+			);
+		});
+	}
+
 	render() {
 		return (
 			<div className="home-page-wrapper">
-				<div className="title-wrapper">Home Page</div>
-				<div className="column-wrapper">
-					<div className="left-column">
-						{/* {this.generateSearchMenu()} */}
-						<button
-							name=""
-							className="btn"
-							onClick={() => this.handleFilter("flag")}
+				<div className="title-wrapper">
+					Product Page
+					<div className="select-options">
+						<label htmlFor="Select Filter">Filter</label>
+						<select
+							id="Select Filter"
+							name="Select Filter"
+							size="1"
+							className="selectFilter"
 						>
-							Flags
-						</button>
-						<button
-							name="emblem"
-							className="btn"
-							onClick={() => this.handleFilter("emblem")}
-						>
-							Emblems
-						</button>
-						<button
-							className="btn"
-							onClick={() => this.handleFilter("RESET")}
-						>
-							ALL
-						</button>
+							<option
+								className="btn"
+								onClick={() => this.handleFilter("RESET")}
+							>
+								ALL
+							</option>
+							{this.generateSearchMenu()}
+						</select>
 					</div>
+				</div>
+				<div className="column-wrapper">
 					<div className="right-column">{this.productItems()}</div>
 				</div>
 			</div>

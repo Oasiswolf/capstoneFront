@@ -4,7 +4,7 @@
 	justify-content: space-evenly;
 	width: 100vw;
 	margin: 0px;
-	height: 25vh;
+	height: fit-content;
 
 	.navbar {
 		width: 100vw;
@@ -46,6 +46,7 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			margin-right: 20px;
 			Nav {
 				flex-wrap: inherit;
 			}
