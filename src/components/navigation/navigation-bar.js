@@ -43,28 +43,6 @@ export default class Navigation extends Component {
 						</Nav>
 					</div>
 				</Navbar>
-				{/* <div className="flexdiv">
-					<div className="logo-img">
-						<img src={logo} />
-					</div>
-					<div className="site-name">Jukebox Wood Crafts</div>
-					<div className="navBtnDiv">
-						<select name="Nav-Links">
-							<option as={Link} to="/">
-								Home
-							</option>
-							<option as={Link} to="/products">
-								Products
-							</option>
-							<option as={Link} to="/about">
-								About
-							</option>
-							<option as={Link} to="/contact">
-								Contact
-							</option>
-						</select>
-					</div>
-				</div> */}
 			</div>
 		);
 	}

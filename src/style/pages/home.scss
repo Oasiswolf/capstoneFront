@@ -1,9 +1,7 @@
 .home-page-wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr;
 	gap: 3px;
-	flex-direction: column;
 	.title-wrapper {
 		display: flex;
 		justify-content: center;
@@ -13,7 +11,7 @@
 	}
 	.column-wrapper {
 		display: grid;
-		// grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		margin-top: 5px;
 		position: relative;
 		width: 99vw;
@@ -22,8 +20,9 @@
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: center;
-			position: fixed;
+			// position: fixed;
 			gap: 3px;
+			width: 10vw;
 			.btn {
 				height: 30px;
 				width: 110px;
@@ -43,7 +42,91 @@
 		.right-column {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
-			margin-left: 150px;
+			width: 75vw;
+		}
+	}
+}
+
+@media screen and (min-width: 0px) and (max-width: 495px) {
+	.home-page-wrapper {
+		.title-wrapper {
+		}
+		.column-wrapper {
+			display: grid;
+			grid-template-columns: 1fr;
+			margin-top: 5px;
+			// width: 99vw;
+			.left-column {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				// position: fixed;
+				gap: 3px;
+				// width: 10vw;
+				.btn {
+					height: 15px;
+					width: 50px;
+					background-color: beige;
+					color: navy;
+					transition: 0.5s ease-in-out;
+					font-size: 1rem;
+					padding: 2px 5px;
+
+					&:hover {
+						background-color: slategray;
+						color: tan;
+					}
+				}
+			}
+
+			.right-column {
+				display: grid;
+				grid-template-columns: 1fr;
+				// width: 75vw;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 495px) and (max-width: 890px) {
+	.home-page-wrapper {
+		.title-wrapper {
+		}
+		.column-wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			margin-top: 5px;
+			// width: 99vw;
+			.left-column {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				// position: fixed;
+				gap: 3px;
+				width: 85px;
+				.btn {
+					height: 22px;
+					width: 75px;
+					background-color: beige;
+					color: navy;
+					transition: 0.5s ease-in-out;
+					font-size: 1.25rem;
+					padding: 2px 5px;
+
+					&:hover {
+						background-color: slategray;
+						color: tan;
+					}
+				}
+			}
+
+			.right-column {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				// width: 75vw;
+			}
 		}
 	}
 }
