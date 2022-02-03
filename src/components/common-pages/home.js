@@ -105,6 +105,7 @@ export default class Home extends Component {
 		return searchButtons.map((button) => {
 			return (
 				<option
+					key={`${button}`}
 					className="btn"
 					onClick={() => {
 						this.handleFilter(`${button}`);
