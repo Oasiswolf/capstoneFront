@@ -34,7 +34,7 @@ export default class Addmin extends Component {
 				response.json();
 			})
 			.then((data) => {
-				console.log("Data", data);
+				console.log("Add Item Data", data);
 				this.setState({
 					title: "",
 					category: "",
@@ -58,8 +58,7 @@ export default class Addmin extends Component {
 					<div className="center-column">
 						<form
 							className="add-item-form"
-							onSubmit={this.handleSubmit}
-						>
+							onSubmit={this.handleSubmit}>
 							<div className="title">
 								<h3>Title: </h3>
 								<input

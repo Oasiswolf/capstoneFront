@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import Dropdown from "reactstrap/src/Dropdown";
+import DropdownToggle from "reactstrap/src/DropdownToggle";
+import DropdownMenu from "reactstrap/src/DropdownMenu";
+import DropdownItem from "reactstrap/src/DropdownItem";
 
 import Product from "../product-area/product";
 
@@ -7,35 +11,10 @@ export default class Home extends Component {
 		super();
 		this.state = {
 			data: [],
-			name: "",
 		};
 		this.productItems = this.productItems.bind(this);
 		this.handleFilter = this.handleFilter.bind(this);
-		this.itemName = this.itemName.bind(this);
 		this.generateSearchMenu = this.generateSearchMenu.bind(this);
-	}
-
-	itemName() {
-		return this.setState({
-			name:
-				"flag" ||
-				"emblem" ||
-				"tray" ||
-				"misc" ||
-				"wreath" ||
-				"wagon" ||
-				"cross" ||
-				"family" ||
-				"stall" ||
-				"igy6" ||
-				"heart" ||
-				"desk" ||
-				"mother" ||
-				"puzzle" ||
-				"christmas" ||
-				"valentine" ||
-				"light",
-		});
 	}
 
 	componentDidMount() {
@@ -49,6 +28,7 @@ export default class Home extends Component {
 	}
 
 	getProductItems(filter = null) {
+		console.log("test");
 		fetch("https://jukebox-wood-crafts.herokuapp.com/item/get")
 			.then((response) => response.json())
 			.then((data) => {
@@ -73,6 +53,7 @@ export default class Home extends Component {
 	}
 
 	handleFilter(filter) {
+		console.log("test2");
 		if (filter === "RESET") {
 			this.getProductItems();
 		} else {
@@ -104,15 +85,31 @@ export default class Home extends Component {
 
 		return searchButtons.map((button) => {
 			return (
-				<option
+				// <option
+				// 	key={`${button}`}
+				// 	className="btn"
+				// 	onClick={() => {
+				// 		console.log("test3");
+
+				// 		this.handleFilter(`${button}`);
+				// 	}}>{`${button}`}</option>
+				<DropdownItem
 					key={`${button}`}
 					className="btn"
 					onClick={() => {
+						console.log("test3");
+
 						this.handleFilter(`${button}`);
-					}}
-				>{`${button}`}</option>
+					}}>
+					{`${button}`}
+				</DropdownItem>
 			);
 		});
+	}
+
+	handleChange(event) {
+		// select feature
+		// to catch the on select active event to change the options selected
 	}
 
 	render() {
@@ -121,21 +118,51 @@ export default class Home extends Component {
 				<div className="title-wrapper">
 					Product Page
 					<div className="select-options">
-						<label htmlFor="Select Filter">Filter</label>
+						{/* <label htmlFor="Select Filter">Filter</label>
 						<select
 							id="Select Filter"
 							name="Select Filter"
 							size="1"
-							className="selectFilter"
-						>
+							className="selectFilter">
 							<option
 								className="btn"
-								onClick={() => this.handleFilter("RESET")}
-							>
+								onClick={() => this.handleFilter("RESET")}>
 								ALL
 							</option>
 							{this.generateSearchMenu()}
 						</select>
+					</div> */}
+						{/* <div className="filter-drop"> */}
+						<Dropdown
+							direction="end"
+							toggle={function noRefCheck() {}}>
+							<DropdownToggle
+								caret
+								id="Select Filter"
+								name="Select Filter"
+								size="1"
+								className="selectFilter">
+								Filter Items
+							</DropdownToggle>
+							<DropdownMenu>
+								{/* <DropdownItem header>Header</DropdownItem> */}
+								<DropdownItem
+									className="btn"
+									onClick={() => this.handleFilter("RESET")}>
+									Display All
+								</DropdownItem>
+								{/* <DropdownItem text>
+									Dropdown Item Text
+								</DropdownItem> */}
+								{/* <DropdownItem disabled>
+									Action (disabled)
+								</DropdownItem> */}
+								<DropdownItem divider />
+								{this.generateSearchMenu()}
+								{/* <DropdownItem>Bar Action</DropdownItem>
+								<DropdownItem>Quo Action</DropdownItem> */}
+							</DropdownMenu>
+						</Dropdown>
 					</div>
 				</div>
 				<div className="column-wrapper">
